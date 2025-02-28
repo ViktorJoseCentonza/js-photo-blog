@@ -34,12 +34,10 @@ section {
 
 
 .text-font-google {
-    font-family: "Fredoka", monospace;
+    font-family: "Sometype Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
 }
 
 /* #endregion common */
@@ -105,7 +103,7 @@ main {
                 }
 
                 .text-container {
-                    font-family: "fredoka";
+                    font-family: "Sometype Mono";
                     text-align: right;
                     margin: 0 0.75rem;
                     height: 50px;
