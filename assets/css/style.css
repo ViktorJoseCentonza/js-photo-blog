@@ -7,10 +7,12 @@
 
 html,
 body {
+    /*to allow main to occupy fullscreen when content overflows*/
     height: 100%;
 }
 
 section {
+    /*keep the cards 1-column when below tablet dimensions*/
     width: 80%;
     margin: auto;
 }
@@ -25,6 +27,8 @@ section {
 
 /* #endregion debug */
 
+/* #region fontimports */
+/* font for the title */
 .title-font-google {
     font-family: "Edu TAS Beginner", sans-serif;
     font-optical-sizing: auto;
@@ -32,7 +36,7 @@ section {
     font-style: normal;
 }
 
-
+/* font for the card text */
 .text-font-google {
     font-family: "Sometype Mono", monospace;
     font-optical-sizing: auto;
@@ -40,15 +44,16 @@ section {
     font-style: normal;
 }
 
+/* #endregion fontimports */
 /* #endregion common */
 
 
 /* #region header */
 header {
-    background-size: cover;
+    background-size: auto;
     background-image: url("/assets/img/wall.png");
     height: 12%;
-
+    /* center the title */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +70,7 @@ header {
 /* #region main */
 main {
     height: 100%;
-    background-size: cover;
+    background-size: auto;
     background-image: url("/assets/img/cork.png");
 
 
@@ -74,12 +79,15 @@ main {
         justify-content: center;
         flex-wrap: wrap;
         gap: 1.5rem;
+        /* separate cards from header */
         padding-top: 4rem;
 
         .col {
+            /* separate cards vertically */
             padding: 0.5rem 0;
 
             .card {
+                /* position relative to be used for center-pin */
                 position: relative;
                 background-color: white;
                 box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
@@ -88,7 +96,6 @@ main {
                     position: absolute;
                     top: 0;
                     left: 50%;
-
                     z-index: 1;
                     transform: translate(-50%, -50%);
                 }
