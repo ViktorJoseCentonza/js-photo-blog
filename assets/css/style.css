@@ -5,8 +5,13 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 section {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -26,14 +31,14 @@ section {
 header {
     background-size: cover;
     background-image: url("/assets/img/wall.png");
-    height: 200px;
+    height: 10%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     h1 {
-        font-size: 120px;
+        font-size: 60px;
     }
 }
 
@@ -42,6 +47,7 @@ header {
 
 /* #region main */
 main {
+    height: 100%;
     background-size: cover;
     background-image: url("/assets/img/cork.png");
 
@@ -51,9 +57,10 @@ main {
         justify-content: center;
         flex-wrap: wrap;
         gap: 1.5rem;
+        padding-top: 4rem;
 
         .col {
-            padding: 4rem 0;
+            padding: 0.5rem 0;
 
             .card {
                 position: relative;
@@ -80,8 +87,8 @@ main {
 
                 .text-container {
                     margin: 0 0.75rem;
-                    padding-bottom: 0.755rem;
-                    height: 70px;
+
+                    height: 50px;
                     /* in case of overfilling it avoids clipping */
                     overflow-y: hidden;
                 }
@@ -91,3 +98,15 @@ main {
 }
 
 /* #endregion main */
+
+/* #region mediaqueries */
+
+/*used the wrap to avoid needing mediaqueries, over 1700~px the images would not be in 3 columns so i restrained them to 1000px width*/
+
+@media screen and (min-width:1440px) {
+    section {
+        width: 1000px;
+    }
+}
+
+/* #endregion mediaqueries */
