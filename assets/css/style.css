@@ -49,14 +49,16 @@ main {
     .row {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
 
         .col {
             padding: 4rem 0;
 
             .card {
-                width: 648px;
                 position: relative;
                 background-color: white;
+                box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 
                 .center-pin {
                     position: absolute;
@@ -69,15 +71,17 @@ main {
 
                 .img-container {
                     img {
-                        margin: 1.5rem
+                        width: 265px;
+                        height: 265px;
+                        margin: 0.75rem
                     }
 
                 }
 
                 .text-container {
-                    margin: 0 1.5rem;
-                    padding-bottom: 1.5rem;
-                    height: 150px;
+                    margin: 0 0.75rem;
+                    padding-bottom: 0.755rem;
+                    height: 70px;
                     /* in case of overfilling it avoids clipping */
                     overflow-y: hidden;
                 }
@@ -87,13 +91,3 @@ main {
 }
 
 /* #endregion main */
-
-
-/* #region footer */
-footer {
-    background-size: cover;
-    background-image: url("/assets/img/wall.png");
-    height: 150px;
-}
-
-/* #endregion footer */
