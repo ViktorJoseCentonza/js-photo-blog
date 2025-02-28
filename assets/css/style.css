@@ -1,0 +1,33 @@
+/* #region common */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* #endregion common */
+
+
+/* #region header */
+header {
+    background-size: contain;
+    background-image: url("/assets/img/wall.png");
+    height: 20vh;
+}
+
+/* #endregion header */
+
+
+/* #region main */
+main {
+    background-size: contain;
+    background-image: url("/assets/img/cork.png");
+    height: 80vh;
+}
+
+/* #endregion main */
+
+
+/* #region footer */
+
+/* #endregion footer */
