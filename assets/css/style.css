@@ -24,6 +24,24 @@ section {
 }
 
 /* #endregion debug */
+
+.title-font-google {
+    font-family: "Edu TAS Beginner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.text-font-google {
+    font-family: "Fredoka", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
 /* #endregion common */
 
 
@@ -31,14 +49,15 @@ section {
 header {
     background-size: cover;
     background-image: url("/assets/img/wall.png");
-    height: 10%;
+    height: 12%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     h1 {
-        font-size: 60px;
+        font-family: Edu TAS Beginner;
+        font-size: 70px;
     }
 }
 
@@ -86,8 +105,9 @@ main {
                 }
 
                 .text-container {
+                    font-family: "fredoka";
+                    text-align: right;
                     margin: 0 0.75rem;
-
                     height: 50px;
                     /* in case of overfilling it avoids clipping */
                     overflow-y: hidden;

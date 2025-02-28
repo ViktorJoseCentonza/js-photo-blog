@@ -40,10 +40,10 @@ function renderPosts(object) {
                         </div>
 
                         <div class="text-container">
-                            <span>${object.title}
-                            </span>
                             <span>${object.date}
                             </span>
+                            <div>${object.title}
+                            </div>
                         </div>
                     </div>
                 </div>`
