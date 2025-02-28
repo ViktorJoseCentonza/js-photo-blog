@@ -5,14 +5,36 @@
     box-sizing: border-box;
 }
 
+section {
+    width: 70%;
+    margin: auto;
+}
+
+/* #region debug */
+.debug {
+    * {
+        border: 2px dotted black
+    }
+
+}
+
+/* #endregion debug */
 /* #endregion common */
 
 
 /* #region header */
 header {
-    background-size: contain;
+    background-size: cover;
     background-image: url("/assets/img/wall.png");
-    height: 20vh;
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 120px;
+    }
 }
 
 /* #endregion header */
@@ -20,14 +42,54 @@ header {
 
 /* #region main */
 main {
-    background-size: contain;
+    background-size: cover;
     background-image: url("/assets/img/cork.png");
-    height: 80vh;
+    height: 70%;
+
+    .row {
+        display: flex;
+        justify-content: center;
+
+        .col {
+            padding: 4rem 0;
+
+            .card {
+                width: 648px;
+                position: relative;
+                background-color: white;
+
+                .center-pin {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+
+                    z-index: 1;
+                    transform: translate(-50%, -50%);
+                }
+
+                .img-container {
+                    img {
+                        margin: 1.5rem
+                    }
+
+                }
+
+                .text-container {
+                    margin: 0 1.5rem
+                }
+            }
+        }
+    }
 }
 
 /* #endregion main */
 
 
 /* #region footer */
+footer {
+    background-size: cover;
+    background-image: url("/assets/img/wall.png");
+    height: 10%;
+}
 
 /* #endregion footer */
