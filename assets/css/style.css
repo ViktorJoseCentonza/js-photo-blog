@@ -11,6 +11,12 @@ body {
     height: 100%;
 }
 
+body {
+    height: max-content;
+    background-size: contain;
+    background-image: url("/assets/img/cork.png");
+}
+
 section {
     /*keep the cards 1-column when below tablet dimensions*/
     width: 80%;
@@ -69,11 +75,6 @@ header {
 
 /* #region main */
 main {
-    height: 100%;
-    background-size: auto;
-    background-image: url("/assets/img/cork.png");
-
-
     .row {
         display: flex;
         justify-content: center;
