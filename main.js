@@ -5,19 +5,14 @@ const overlayEl = document.getElementById("overlay")
 //console.log(overlayEl);
 const buttonEl = document.querySelector("#overlay button")
 //console.log(buttonEl);
-
 const overlayImgEl = document.querySelector("#overlay img")
 //console.log(overlayImgEl);
 
-
-
-
 //fetch section
-
 axios.get("https://lanciweb.github.io/demo/api/pictures/")
     .then(response => {
         console.log(`-------------------------------------`);
-        console.log(`begin foreach to transfer posts from result array to postsArray`);
+        console.log(`begin foreach to transfer posts from response to renderPosts function`);
 
         response.data.forEach((element, i) => {
             console.log(element);

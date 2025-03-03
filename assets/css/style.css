@@ -47,9 +47,12 @@ section {
         margin: 1rem 0 2rem 0;
     }
 
-    img {
-        width: 600px;
-        height: 600px;
+    #overlay-img {
+        max-width: 600px;
+
+        img {
+            width: 100%;
+        }
     }
 }
 
