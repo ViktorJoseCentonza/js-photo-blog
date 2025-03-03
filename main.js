@@ -71,6 +71,7 @@ function addEventListenerToCards() {
 
         thisCard[i].addEventListener('mouseenter', function () {
             console.log(`mouseEnter event listener for item ${i} activated`);
+            thisCard[i].querySelector(".center-pin").classList.add("d-none")
             thisCard[i].style.transform = 'rotate(10deg) scale(1.2,1.2)';
             thisCard[i].style.zIndex = 2
         })
@@ -79,6 +80,7 @@ function addEventListenerToCards() {
             console.log(`MouseLeave event listener for item ${i} activated`);
             thisCard[i].style.transform = 'rotate(0deg)';
             thisCard[i].style.zIndex = 1
+            thisCard[i].querySelector(".center-pin").classList.remove("d-none")
         })
     }
 }
