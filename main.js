@@ -1,37 +1,42 @@
 
 const rowEl = document.querySelector(".row")
 //console.log(rowEl);
+const overlayEl = document.getElementById("overlay")
+//console.log(overlayEl);
+const overlayImgEl = document.querySelector("#overlay img")
+//console.log(overlayImgEl);
+
+
 
 
 //fetch section
 //has to be declared as empty 
 //const postsArray = []
-fetch("https://lanciweb.github.io/demo/api/pictures/")
-    .then((response) => response.json())
-    .then((result) => {
+axios.get("https://lanciweb.github.io/demo/api/pictures/")
+    .then(response => {
         console.log(`-------------------------------------`);
         console.log(`begin foreach to transfer posts from result array to postsArray`);
 
-        result.forEach((element, i) => {
+        response.data.forEach((element, i) => {
             //postsArray.push(element)
-            console.log(`this is element ${i + 1}:`);
+            //console.log(`this is element ${i + 1}:`);
             console.log(element);
-            renderPosts(element)
+            renderPosts(element, i)
         });
 
     })
+
+    .then(() => addEventListenerToCards())
+
     .catch((error) => console.error(error));
 
 //console.log(`This is the array containing the received posts: `);
 //console.log(postsArray);
 
-
-
-
 //functions
 
-function renderPosts(object) {
-    const markup = `<div class="col">
+function renderPosts(object, i) {
+    const markup = `<div id="card n${i}"class="col">
                     <div class="card">
                         <img class="center-pin" src="./assets/img/pin.svg" alt="pin">
 
@@ -53,3 +58,21 @@ function renderPosts(object) {
     rowEl.innerHTML += markup
 }
 
+function addEventListenerToCards() {
+
+    const thisCard = document.querySelector(`.row`).children
+    //console.log(thisCard);
+
+    for (let i = 0; i < thisCard.length; i++) {
+        console.log(`this is the ${i} dom element from the collection for the event listener`);
+        console.log(thisCard[i]);
+
+
+        thisCard[i].addEventListener('click', function () {
+            overlayEl.classList.remove("d-none")
+            console.log(`event listener for item ${i} activated`);
+            overlayImgEl.src = thisCard[i].querySelector(".img-container img").src
+        })
+    }
+
+}
