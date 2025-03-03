@@ -28,7 +28,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
 
 //event listener to hide overlay when button clicked
 buttonEl.addEventListener("click", () => overlayEl.classList.add("d-none"))
-
+buttonEl.style.cursor = "pointer";
 //functions
 
 function renderPosts(object, i) {
@@ -57,12 +57,12 @@ function renderPosts(object, i) {
 function addEventListenerToCards() {
 
     const thisCard = document.querySelector(`.row`).children
-    //console.log(thisCard);
+    console.log(thisCard);
 
     for (let i = 0; i < thisCard.length; i++) {
         console.log(`this is the ${i} dom element from the collection for the event listener`);
         console.log(thisCard[i]);
-
+        thisCard[i].style.cursor = "pointer";
         thisCard[i].addEventListener('click', function () {
             overlayEl.classList.remove("d-none")
             console.log(`click event listener for item ${i} activated`);
