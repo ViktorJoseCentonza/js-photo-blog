@@ -33,7 +33,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 function renderPosts(object) {
     const markup = `<div class="col">
                     <div class="card">
-                        <img class="center-pin" src="/assets/img/pin.svg" alt="pin">
+                        <img class="center-pin" src="./assets/img/pin.svg" alt="pin">
 
                         <div class="img-container">
                             <img src="${object.url}" alt="post-photo">
