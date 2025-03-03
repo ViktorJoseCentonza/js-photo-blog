@@ -3,6 +3,9 @@ const rowEl = document.querySelector(".row")
 //console.log(rowEl);
 const overlayEl = document.getElementById("overlay")
 //console.log(overlayEl);
+const buttonEl = document.querySelector("#overlay button")
+//console.log(buttonEl);
+
 const overlayImgEl = document.querySelector("#overlay img")
 //console.log(overlayImgEl);
 
@@ -10,28 +13,26 @@ const overlayImgEl = document.querySelector("#overlay img")
 
 
 //fetch section
-//has to be declared as empty 
-//const postsArray = []
+
 axios.get("https://lanciweb.github.io/demo/api/pictures/")
     .then(response => {
         console.log(`-------------------------------------`);
         console.log(`begin foreach to transfer posts from result array to postsArray`);
 
         response.data.forEach((element, i) => {
-            //postsArray.push(element)
-            //console.log(`this is element ${i + 1}:`);
             console.log(element);
             renderPosts(element, i)
         });
 
     })
-
+    //second then to wait for first async function to end before executing to allow all elements to load
     .then(() => addEventListenerToCards())
 
     .catch((error) => console.error(error));
 
-//console.log(`This is the array containing the received posts: `);
-//console.log(postsArray);
+
+//event listener to hide overlay when button clicked
+buttonEl.addEventListener("click", () => overlayEl.classList.add("d-none"))
 
 //functions
 
@@ -67,12 +68,10 @@ function addEventListenerToCards() {
         console.log(`this is the ${i} dom element from the collection for the event listener`);
         console.log(thisCard[i]);
 
-
         thisCard[i].addEventListener('click', function () {
             overlayEl.classList.remove("d-none")
             console.log(`event listener for item ${i} activated`);
             overlayImgEl.src = thisCard[i].querySelector(".img-container img").src
         })
     }
-
 }
