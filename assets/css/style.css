@@ -23,6 +23,10 @@ section {
     margin: auto;
 }
 
+.d-flex {
+    display: flex;
+}
+
 .d-none {
     display: none;
 }
@@ -34,7 +38,6 @@ section {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
 
-    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -87,7 +90,6 @@ header {
     background-image: url("../img/wall.png");
     height: 12%;
     /* center the title */
-    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -103,7 +105,6 @@ header {
 /* #region main */
 main {
     .row {
-        display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 1.5rem;
