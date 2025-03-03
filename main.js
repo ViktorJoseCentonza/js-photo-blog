@@ -65,8 +65,20 @@ function addEventListenerToCards() {
 
         thisCard[i].addEventListener('click', function () {
             overlayEl.classList.remove("d-none")
-            console.log(`event listener for item ${i} activated`);
+            console.log(`click event listener for item ${i} activated`);
             overlayImgEl.src = thisCard[i].querySelector(".img-container img").src
+        })
+
+        thisCard[i].addEventListener('mouseenter', function () {
+            console.log(`mouseEnter event listener for item ${i} activated`);
+            thisCard[i].style.transform = 'rotate(10deg) scale(1.2,1.2)';
+            thisCard[i].style.zIndex = 2
+        })
+
+        thisCard[i].addEventListener('mouseleave', function () {
+            console.log(`MouseLeave event listener for item ${i} activated`);
+            thisCard[i].style.transform = 'rotate(0deg)';
+            thisCard[i].style.zIndex = 1
         })
     }
 }
