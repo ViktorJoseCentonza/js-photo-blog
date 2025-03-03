@@ -112,7 +112,7 @@ main {
         flex-wrap: wrap;
         gap: 1.5rem;
         /* separate cards from header */
-        padding-top: 4rem;
+        padding-top: 3rem;
 
         .col {
             /* separate cards vertically */
@@ -123,7 +123,7 @@ main {
                 /* position relative to be used for center-pin */
                 position: relative;
                 background-color: white;
-                box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+                box-shadow: 21px 26px 107px 13px rgba(0, 0, 0, 0.3);
 
                 .center-pin {
                     position: absolute;
@@ -144,7 +144,7 @@ main {
 
                 .text-container {
                     font-family: "Sometype Mono";
-                    text-align: right;
+
                     margin: 0 0.75rem;
                     height: 50px;
                     /* in case of overfilling it avoids clipping */
