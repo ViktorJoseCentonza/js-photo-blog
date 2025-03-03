@@ -23,6 +23,7 @@ section {
     margin: auto;
 }
 
+/* #region utility */
 .d-flex {
     display: flex;
 }
@@ -55,6 +56,8 @@ section {
         }
     }
 }
+
+/* #endregion utility */
 
 /* #region debug */
 .debug {
@@ -89,7 +92,7 @@ section {
 
 /* #region header */
 header {
-    background-size: auto;
+    background-size: cover;
     background-image: url("../img/wall.png");
     height: 12%;
     /* center the title */
@@ -110,13 +113,13 @@ main {
     .row {
         justify-content: center;
         flex-wrap: wrap;
+
         gap: 1.5rem;
         /* separate cards from header */
         padding-top: 3rem;
 
         .col {
-            /* separate cards vertically */
-            padding: 0.5rem 0;
+            /* transition for all col elements */
             transition: transform 0.1s;
 
             .card {
